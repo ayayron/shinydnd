@@ -1,39 +1,5 @@
 library(shiny)
 
-
-dragSetUI = function(id,textval=c("")) {
-  ns <- NS(id)
-  divlist = lapply(textval,dragUI,id=id)
-  tags$div(divlist)
-}
-
-dropUI = function(id,style=NULL,class="dropelement",vertical=FALSE) {
-  ns = NS(id)
-  if(vertical == TRUE) {
-    divlist = list(tags$div(style="height:20px"),
-                   tags$div(style="height:20px"),
-                   tags$div(style="height:20px")
-                   )
-    tags$div(id=id,class=class,style=style,divlist)
-  } else {
-    tags$div(id=id,class=class,style=style)
-  }
-    
-}
-
-dragUI = function(id,...,style=NULL,class="dragelement"){
-  ns <- NS(id)
-  return(tags$div(id=id,class=class, draggable=TRUE,
-           style=style,list(...)))
-}
-
-registerInputHandler("dragdropshiny.dropper", function(data,...) {
-  if (is.null(data) | data == "")
-    NULL
-  else
-    data
-}, force = TRUE)
-
 # Define UI for application that draws a histogram
 ui <- shinyUI(
   
