@@ -1,7 +1,13 @@
-Title: Shiny Drag-n-Drop!
-Author: Aaron
-AuthorUrl: http://www.rstudio.com/ 
-License: GPL-3
+Package: shinyDND
+Type: Package
+Title: Shiny Drag-n-Drop
+Version: 0.1
+Date: 2016-05-15
+Author: Aaron Hoffer
+AuthorUrl: http://ahoffer.bitbucket.org
+Description: Add functionality to create drag and drop div elements in shiny.
 DisplayMode: Showcase
-Tags: getting-started
-Type: Shiny
+Imports:
+	shiny (>= 0.11)
+URL: https://bitbucket.org/ahoffer/shinydnd
+License: GPL-3
