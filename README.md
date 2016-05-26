@@ -15,8 +15,8 @@ See the example at: [https://ayayron.shinyapps.io/dragndrop/](https://ayayron.sh
 #!r
 
 library(shiny)
+library(shinyDND)
 
-# Define UI for application that draws a histogram
 ui <- shinyUI(
   mainPanel(
     tagList(
