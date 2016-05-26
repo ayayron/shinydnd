@@ -18,14 +18,10 @@ library(shiny)
 
 # Define UI for application that draws a histogram
 ui <- shinyUI(
-  
   mainPanel(
     tagList(
     tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "dragndrop.css"),
-              tags$script(src = "dragndrop.js")#,
-              # tags$link(rel = "stylesheet", type = "text/css", href = "bootstrap-tour-standalone.min.css"),
-              # tags$script(src = "bootstrap-tour-standalone.min.js"),
-              # tags$script(src = "shiny-tour.js")
+              tags$script(src = "dragndrop.js")
     )),
     h1("Drag and Drop Shiny Functions"),
     p("This is an implementation of drag and drop methods for shiny."),
@@ -43,7 +39,6 @@ ui <- shinyUI(
   )
 )
 
-
 # Define server logic required to draw a histogram
 server = shinyServer(function(input, output,session) {
   observeEvent(input$div2,{
@@ -54,6 +49,4 @@ server = shinyServer(function(input, output,session) {
 
 # Run the application 
 shinyApp(ui = ui, server = server)
-
-
 ```
