@@ -19,10 +19,6 @@ library(shinyDND)
 
 ui <- shinyUI(
   mainPanel(
-    tagList(
-    tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "dragndrop.css"),
-              tags$script(src = "dragndrop.js")
-    )),
     h1("Drag and Drop Shiny Functions"),
     p("This is an implementation of drag and drop methods for shiny."),
     h2("DragSetUI"),
