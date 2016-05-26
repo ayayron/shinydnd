@@ -8,6 +8,7 @@ AuthorUrl: http://ahoffer.bitbucket.org
 Description: Add functionality to create drag and drop div elements in shiny.
 DisplayMode: Showcase
 Imports:
-	shiny (>= 0.11)
+    shiny (>= 0.11)
 URL: https://bitbucket.org/ahoffer/shinydnd
 License: GPL-3
+RoxygenNote: 5.0.1
