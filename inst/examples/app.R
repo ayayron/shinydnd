@@ -1,4 +1,7 @@
 library(shiny)
+library(devtools)
+devtools::install_bitbucket("ahoffer/shinydnd")
+library(shinyDND)
 
 # Define UI for application that draws a histogram
 ui <- shinyUI(
