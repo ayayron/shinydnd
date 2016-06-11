@@ -6,11 +6,12 @@
 #'@param style Add a string with additional css styling not defined by id or class
 #'@param class The css class style, uses the standard "dragelement" class that it comes with
 #'@return dragable div element
-#'export
-dragUI = function(id,...,style=NULL,class="dragelement"){
-  ns <- NS(id)
+#'@import htmltools
+#'@export
 
-  dragUI = tags$div(id=id,class=class,draggable=TRUE,
-           style=style,list(...))
+dragUI = function(id,..., style = NULL, class = "dragelement") {
+  ns <- NS(id)
+  dragUI = htmltools::tags$div(id = id, class = class, draggable = TRUE,
+           style = style, list(...))
   htmltools::attachDependencies(dragUI, shinyDNDDep)
 }

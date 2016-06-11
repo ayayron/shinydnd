@@ -15,7 +15,6 @@ dragUI(id, ..., style = NULL, class = "dragelement")
 }
 \value{
 dragable div element
-export
 }
 \description{
 Create a draggable UI element.

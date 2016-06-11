@@ -17,7 +17,6 @@ dropUI(id, style = NULL, class = "dropelement", vertical = FALSE)
 }
 \value{
 div element with nested elements if vertical is true
-export
 }
 \description{
 dropUI

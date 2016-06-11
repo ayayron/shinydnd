@@ -1,6 +1,6 @@
 library(shiny)
-library(devtools)
-devtools::install_bitbucket("ahoffer/shinydnd")
+# library(devtools)
+# devtools::install_bitbucket("ahoffer/shinydnd")
 library(shinyDND)
 
 # Define UI for application that draws a histogram
@@ -9,21 +9,18 @@ ui <- shinyUI(
   mainPanel(
     tagList(
     tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "dragndrop.css"),
-              tags$script(src = "dragndrop.js")#,
-              # tags$link(rel = "stylesheet", type = "text/css", href = "bootstrap-tour-standalone.min.css"),
-              # tags$script(src = "bootstrap-tour-standalone.min.js"),
-              # tags$script(src = "shiny-tour.js")
+              tags$script(src = "dragndrop.js")
     )),
     h1("Drag and Drop Shiny Functions"),
     p("This is an implementation of drag and drop methods for shiny."),
     h2("DragSetUI"),
-    dragSetUI("div1",textval=c("foo","bar","kai")),
+    dragSetUI("div1", textval = c("foo","bar","kai")),
     h2("Single DragUI"),
     dragUI("div5","foo"),
     dragUI("div4","bar"),
     dragUI("div6","bar"),
     h2("Drop UI, vertical stacking"),
-    dropUI("div3",vertical=TRUE),
+    dropUI("div3",vertical = TRUE),
     h2("Drop UI, Reactive"),
     dropUI("div2"),
     verbatimTextOutput("foo") 

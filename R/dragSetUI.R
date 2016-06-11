@@ -7,9 +7,15 @@
 #'@param id The div id of the draggable element set
 #'@param text_val The vector with the name for each of the draggable elements
 #'@return Returns the set of dragable div elements. Currently they all have the same name.
+#'@import htmltools
+#'@export
+
 dragSetUI = function(id,textval=c("")) {
-  ns <- NS(id)
-  divlist = lapply(textval,dragUI,id=id)
-  dragSetUI = tags$div(divlist)
+  ns = NS(id)
+  divlist = lapply(textval, function(x, div_id = id) {
+                            val = paste0(div_id,x)
+                                    dragUI(val,x)
+                  })
+  dragSetUI = htmltools::tags$div(divlist)
   htmltools::attachDependencies(dragSetUI, shinyDNDDep)
 }
