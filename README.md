@@ -1,4 +1,4 @@
-# shinyDND
+# shinyDND[![Build Status](https://travis-ci.org/ayayron/shinydnd.svg?branch=master)](https://travis-ci.org/ayayron/shinydnd)
 __shinyDND__ is an R package to create Shiny drag and drop elements in R.
 
 See the example at: [https://ayayron.shinyapps.io/dragndrop/](https://ayayron.shinyapps.io/dragndrop/).
