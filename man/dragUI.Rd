@@ -9,6 +9,8 @@ dragUI(id, ..., style = NULL, class = "dragelement")
 \arguments{
 \item{id}{The div id of the element}
 
+\item{...}{Any list of elements can be passed inside the div element itself to create more complex draggable elements, not just text}
+
 \item{style}{Add a string with additional css styling not defined by id or class}
 
 \item{class}{The css class style, uses the standard "dragelement" class that it comes with}

@@ -5,7 +5,7 @@
 #'to pass a vector of elements instead of using a loop or apply function to generate
 #'
 #'@param id The div id of the draggable element set
-#'@param text_val The list with the name for each of the draggable elements
+#'@param textval The list with the name for each of the draggable elements
 #'@return Returns the set of dragable div elements.
 #'@examples dragSetUI("dragset", list("foo", "bar", "baz"))
 #'@import htmltools

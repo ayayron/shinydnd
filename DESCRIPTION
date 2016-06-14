@@ -2,16 +2,17 @@ Package: shinyDND
 Type: Package
 Title: Shiny Drag-n-Drop
 Version: 0.1.0
-Date: 2016-06-11
+Date: 2016-06-14
 Authors@R: c(person("Aaron", "Hoffer", email="ahoffer42@gmail.com",
     role=c("aut","cre")))
-Author: Aaron Hoffer
+Maintainer: Aaron Hoffer <ahoffer42@gmail.com>
 AuthorUrl: http://ayayron.github.io/
 Description: Add functionality to create drag and drop div elements in shiny.
 DisplayMode: Showcase
 Imports:
     shiny (>= 0.11),
     htmltools
-URL: https://bitbucket.org/ahoffer/shinydnd
 License: GPL-3
+URL: https://github.com/ayayron/shinydnd
+BugReports: https://github.com/ayayron/shinydnd/issues
 RoxygenNote: 5.0.1

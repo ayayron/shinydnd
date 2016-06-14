@@ -9,7 +9,7 @@ dragSetUI(id, textval = list(""))
 \arguments{
 \item{id}{The div id of the draggable element set}
 
-\item{text_val}{The list with the name for each of the draggable elements}
+\item{textval}{The list with the name for each of the draggable elements}
 }
 \value{
 Returns the set of dragable div elements.
