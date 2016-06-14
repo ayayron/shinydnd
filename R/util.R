@@ -1,10 +1,11 @@
+#'Utility Functions
+#'
+#'Load the shiny drag and drop javascript dependencies
+#'@import shiny htmltools
 .onAttach <- function(...) {
 
-	# load the shiny library if it previously hasn't been loaded
-	library(shiny)
-
 	# register the js input handler to make the element reactive
-	registerInputHandler("dragdropshiny.dropper", function(data,...) {
+	shiny::registerInputHandler("dragdropshiny.dropper", function(data,...) {
 		if (is.null(data) | data == "")
 	  	return(NULL)
 		else
@@ -12,7 +13,7 @@
 	}, force = TRUE)
 
   # Create link to javascript and css files for package, referenced below
-  shiny::addResourcePath("shinydnd", system.file("www", package="shinyDND"))
+  shiny::addResourcePath("shinydnd", system.file("www", package = "shinyDND"))
 }
 
 # htmlDependency js and css will be used in other functions with attachDependency

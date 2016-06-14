@@ -4,19 +4,22 @@
 \alias{dragSetUI}
 \title{dragSetUI}
 \usage{
-dragSetUI(id, textval = c(""))
+dragSetUI(id, textval = list(""))
 }
 \arguments{
 \item{id}{The div id of the draggable element set}
 
-\item{text_val}{The vector with the name for each of the draggable elements}
+\item{text_val}{The list with the name for each of the draggable elements}
 }
 \value{
-Returns the set of dragable div elements. Currently they all have the same name.
+Returns the set of dragable div elements.
 }
 \description{
 With draggable elements, you may not want to create one at a time, 
 instead creating a set with a common id prefix. This simplifies the process
 to pass a vector of elements instead of using a loop or apply function to generate
+}
+\examples{
+dragSetUI("dragset", list("foo", "bar", "baz"))
 }
 

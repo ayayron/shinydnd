@@ -10,7 +10,6 @@
 #'@export
 
 dragUI = function(id,..., style = NULL, class = "dragelement") {
-  ns <- NS(id)
   dragUI = htmltools::tags$div(id = id, class = class, draggable = TRUE,
            style = style, list(...))
   htmltools::attachDependencies(dragUI, shinyDNDDep)

@@ -4,7 +4,8 @@
 \alias{dropUI}
 \title{dropUI}
 \usage{
-dropUI(id, style = NULL, class = "dropelement", vertical = FALSE)
+dropUI(id, style = NULL, class = "dropelement", vertical = FALSE,
+  nrow = 1)
 }
 \arguments{
 \item{id}{The div id of the element}
@@ -14,6 +15,8 @@ dropUI(id, style = NULL, class = "dropelement", vertical = FALSE)
 \item{class}{The css class style}
 
 \item{vertical}{Make the drop element allow multiple drag elements vertically arranged}
+
+\item{nrow}{If vertical is TRUE, then you can set the number of rows to be used in the vertical selection. Height is fixed at 20px.}
 }
 \value{
 div element with nested elements if vertical is true
