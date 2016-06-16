@@ -31,7 +31,7 @@ ui <- shinyUI(
       you can add the parameters vertical = TRUE and nrow = X, where X is 
       the number of rows that will be generated in the drop area."),
     code('dropUI("div3",vertical = TRUE, nrow = 4)'), br(), br(),
-    dropUI("div3",vertical = TRUE, nrow = 4),
+    dropUI("div3", row_n = 4, col_n = 3),
     h2("Drop UI, Reactive"),
     p("The drop area can be made reactive, such that when something is dragged
       into it a reactive function will run. Using the observeEvent function

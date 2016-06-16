@@ -4,9 +4,9 @@
 	background-color:#EEE; 
 	color: #333;
 	border-radius: 3px;
-	display:table-cell;
 	text-align:center; 
 	vertical-align:middle;
+	margin:auto;
 
 }
 .dropelement {
