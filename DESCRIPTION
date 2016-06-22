@@ -2,7 +2,7 @@ Package: shinyDND
 Type: Package
 Title: Shiny Drag-n-Drop
 Version: 0.1.0
-Date: 2016-06-14
+Date: 2016-06-21
 Authors@R: c(person("Aaron", "Hoffer", email="ahoffer42@gmail.com",
     role=c("aut","cre")))
 Maintainer: Aaron Hoffer <ahoffer42@gmail.com>

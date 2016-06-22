@@ -9,7 +9,7 @@ $(document).ready(function(){
     e.preventDefault();
     var data=e.originalEvent.dataTransfer.getData("Text");
     e.target.appendChild(document.getElementById(data));
-    var el = $(e.target)
+    var el = $(e.target);
     el.trigger("change");
   });
 });

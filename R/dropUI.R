@@ -3,8 +3,8 @@
 #'@param id The div id of the element
 #'@param style The css styling
 #'@param class The css class style
-#'@param vertical Make the drop element allow multiple drag elements vertically arranged
-#'@param nrow If vertical is TRUE, then you can set the number of rows to be used in the vertical selection. Height is fixed at 20px.
+#'@param row_n set the number of rows to be used in the vertical selection. Height is proportional to the number of rows.
+#'@param col_n set the number of columns to be used in the vertical selection. Width is proportional to the number of columns.
 #'@return div element with nested elements if vertical is true
 #'@import htmltools
 #'@export

@@ -14,23 +14,23 @@ ui <- shinyUI(
     code("library(shinyDND)"), br(),
     code('dragUI("div6","bar")'),
     p("where div6 is the name of the div element and bar is the text in the element."),
-    dragUI("div6","bar"),
+    div(dragUI("div6","bar"), style="margin-left:-90%"),
     p("The elements can be styled using css (the class is currently dragelement) and setting
       the class parameter."),
     code('dragUI("div5","foo", style = "background-color:red", class = "dragelement")'), br(), br(),
-    dragUI("div5","foo", style = "background-color:red", class = "dragelement"),
+    div(dragUI("div5","foo", style = "background-color:red", class = "dragelement"), style = "margin-left:-90%"),
     p("Also, the elements don't have to just be text. You can use HTML tag elements 
       (tags$) or HTML(), such as 'a' links inside the element."),
     code('dragUI("div4",tags$a("a",href = "foo"))'), br(), br(),
-    dragUI("div4",tags$a("a",href = "foo")),
+    div(dragUI("div4",tags$a("a",href = "foo")), style = "margin-left:-90%"),
     h2("Drop UI"),
     p("A drop area can be created for these draggable elements"),
     h2("Drop UI, vertical stacking"),
     p("If you try to drop more than one draggable element into a drop area,
       they are placed horizontally. If you want to place them vertically,
-      you can add the parameters vertical = TRUE and nrow = X, where X is 
-      the number of rows that will be generated in the drop area."),
-    code('dropUI("div3",vertical = TRUE, nrow = 4)'), br(), br(),
+      you can add the parameters row_n = X and col_n = Y, where X and Y are 
+      the number of rows and columns, respectively, that will be generated in the drop area."),
+    code('dropUI("div3",row_n = 4, col_n = 3)'), br(), br(),
     dropUI("div3", row_n = 4, col_n = 3),
     h2("Drop UI, Reactive"),
     p("The drop area can be made reactive, such that when something is dragged
@@ -50,7 +50,7 @@ ui <- shinyUI(
       called DragSetUI. Here you can specify each of the elements in a list and it will create
       multiple elements with the div name prefix you feed it."),
     code('dragSetUI("div1", textval = list("foo",tags$a("a",href = "bar"),"baz"))'), br(), br(),
-    dragSetUI("div1", textval = list("foo",tags$a("a",href = "bar"),"baz"))
+    div(dragSetUI("div1", textval = list("foo",tags$a("a",href = "bar"), "baz")), style="margin-left:-90%")
   )
 )
 
