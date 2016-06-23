@@ -37,12 +37,9 @@ A drop area can be created for these draggable elements with the function:
 ```r
 dropUI("div3")
 ```
-If you try to drop more than one draggable element into a drop area,
-they are placed horizontally. If you want to place them vertically,
-you can add the parameters `vertical = TRUE` and `nrow = X`, where __X__ is 
-the number of rows that will be generated in the drop area.
+If you try to drop more than one draggable element into a drop area, they are placed horizontally. If you want to place them vertically, you can add the parameters `row_n = X` and `col_n = Y`, where __X__ and __Y__ are the number of rows and columns, respectively, that will be generated in the drop area.
 ```r
-dropUI("div3", vertical = TRUE, nrow = 4)
+dropUI("div4",row_n = 4, col_n = 3) 
 ```
 The drop area can be made reactive, such that when something is dragged
 into it a reactive function will run. Using the observeEvent function
@@ -79,7 +76,8 @@ ui <- shinyUI(
     dragUI("div5","foo", style = "background-color:red", class = "dragelement"),
     dragUI("div4",tags$a("a",href = "foo")),
     h2("Drop UI"),
-    dropUI("div3",vertical = TRUE, nrow = 4),
+    dropUI("div3",row_n = 4, col_n = 3),
+    h2("Drop UI Reactive"),
     dropUI("div2"),
     h2("DragSetUI"),
     dragSetUI("div1", textval = list("foo",tags$a("a",href = "bar"),"baz"))
