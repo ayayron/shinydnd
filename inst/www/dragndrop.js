@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).bind('DOMNodeInserted', function(){
   $(".dropelement").on("dragover",function(e){
     e.preventDefault();
   });
@@ -34,7 +34,7 @@ $.extend(dragDropBinding, {
     $(el).off(".dragDropBinding");
   },
   getType: function() {
-  	return "dragdropshiny.dropper";
+    return "dragdropshiny.dropper";
 }
 
 });
