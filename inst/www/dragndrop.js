@@ -8,9 +8,11 @@ $(document).bind('DOMNodeInserted', function(){
   $(".dropelement").on("drop",function(e){
     e.preventDefault();
     var data=e.originalEvent.dataTransfer.getData("Text");
-    e.target.appendChild(document.getElementById(data));
-    var el = $(e.target);
-    el.trigger("change");
+    if (e.target.nodeName !== "IMG") {
+      e.target.appendChild(document.getElementById(data));
+      var el = $(e.target);
+      el.trigger("change");
+    }
   });
 });
 
