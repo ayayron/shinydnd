@@ -16,7 +16,7 @@ library(shinyDND)
 * _dragSetUI_: Set of draggable div elements.
 * _dropUI_: Droppable div element.
 
-###dragUI
+### dragUI
 Draggable div elements can now be easily created in your shiny code by running:
 ```r 
 dragUI("div6", "bar")
@@ -32,7 +32,7 @@ Also, the elements don't have to just be text. You can use HTML tag elements
 dragUI("div4",tags$a("a",href = "foo"))
 ```
 
-###dropUI
+### dropUI
 A drop area can be created for these draggable elements with the function:
 ```r
 dropUI("div3")
@@ -53,7 +53,7 @@ observeEvent(input$div2, {
 Similar to the dragUI elements, the element can be styled using the style parameter or
 the class parameter (the class is currently ```dropelement```) in css.
 
-###dragSetUI
+### dragSetUI
 To make it easier to create multiple draggable elements there is a secoond function
 called DragSetUI. Here you can specify each of the elements in a list and it will create
 multiple elements with the div name prefix you feed it.
